@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->get( '/post/do/seed', 'PostController@seed' );
