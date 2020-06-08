@@ -16,4 +16,10 @@ $router->get('/', function () use ($router) {
 });
 
 
+$router->get( '/posts', 'PostController@index' );
+$router->get( '/posts/{id}', 'PostController@show' );
+$router->post( '/posts', 'PostController@create' );
+$router->put( '/posts/{id}','PostController@update' );
+$router->delete( '/posts/{id}', 'PostController@delete' );
+
 $router->get( '/post/do/seed', 'PostController@seed' );
